@@ -63,13 +63,13 @@ export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
         
         {/* Animation placeholder */}
         <motion.div 
-          className="w-64 h-48 mx-auto mb-8 bg-dark-surface rounded-2xl flex items-center justify-center shadow-[20px_20px_60px_#0d0d1a,-20px_-20px_60px_#232342]"
+          className="w-64 h-48 mx-auto mb-8 bg-slate-800 rounded-2xl flex items-center justify-center shadow-[20px_20px_60px_#0d0d1a,-20px_-20px_60px_#232342]"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <motion.i 
-            className="fas fa-heart-pulse text-6xl text-primary"
+            className="fas fa-heart-pulse text-6xl text-violet-400"
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -82,7 +82,7 @@ export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
         >
           <Button 
             onClick={onNext}
-            className="w-full py-4 bg-gradient-to-r from-primary to-accent rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl"
+            className="w-full py-4 bg-gradient-to-r from-violet-500 to-cyan-400 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl"
             size="lg"
           >
             Get Started <i className="fas fa-arrow-right ml-2" />

@@ -83,7 +83,7 @@ export function ProfileScreen({ goal, onComplete }: ProfileScreenProps) {
               <Input
                 type="number"
                 placeholder="25"
-                className="w-full p-4 bg-dark-surface rounded-xl border border-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                className="w-full p-4 bg-slate-800 rounded-xl border border-gray-600 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all duration-300"
                 {...form.register('age', { valueAsNumber: true })}
               />
               {form.formState.errors.age && (
@@ -95,7 +95,7 @@ export function ProfileScreen({ goal, onComplete }: ProfileScreenProps) {
               <Input
                 type="number"
                 placeholder="175"
-                className="w-full p-4 bg-dark-surface rounded-xl border border-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                className="w-full p-4 bg-slate-800 rounded-xl border border-gray-600 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all duration-300"
                 {...form.register('height', { valueAsNumber: true })}
               />
               {form.formState.errors.height && (
@@ -109,7 +109,7 @@ export function ProfileScreen({ goal, onComplete }: ProfileScreenProps) {
             <Input
               type="number"
               placeholder="70"
-              className="w-full p-4 bg-dark-surface rounded-xl border border-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+              className="w-full p-4 bg-slate-800 rounded-xl border border-gray-600 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all duration-300"
               {...form.register('weight', { valueAsNumber: true })}
             />
             {form.formState.errors.weight && (

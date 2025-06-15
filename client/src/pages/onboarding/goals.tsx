@@ -57,8 +57,8 @@ export function GoalsScreen({ onNext }: GoalsScreenProps) {
                 className={cn(
                   "transition-all duration-300 cursor-pointer",
                   selectedGoal === goal.id 
-                    ? "ring-2 ring-primary bg-primary/20 border-primary/30" 
-                    : "hover:bg-primary/10"
+                    ? "ring-2 ring-violet-500 bg-violet-500/20 border-violet-500/30" 
+                    : "hover:bg-violet-500/10"
                 )}
                 onClick={() => handleGoalSelect(goal.id)}
                 hoverable={true}
@@ -80,7 +80,7 @@ export function GoalsScreen({ onNext }: GoalsScreenProps) {
                       animate={{ scale: 1 }}
                       className="ml-auto"
                     >
-                      <i className="fas fa-check text-primary text-xl" />
+                      <i className="fas fa-check text-violet-400 text-xl" />
                     </motion.div>
                   )}
                 </div>
@@ -98,7 +98,7 @@ export function GoalsScreen({ onNext }: GoalsScreenProps) {
             onClick={handleContinue}
             disabled={!selectedGoal}
             className={cn(
-              "w-full py-4 bg-gradient-to-r from-primary to-accent rounded-2xl font-semibold transition-all duration-300",
+              "w-full py-4 bg-gradient-to-r from-violet-500 to-cyan-400 rounded-2xl font-semibold transition-all duration-300",
               selectedGoal 
                 ? "opacity-100 hover:shadow-lg transform hover:scale-105" 
                 : "opacity-50 cursor-not-allowed"
