@@ -8,6 +8,10 @@ import { WelcomeScreen } from "./pages/onboarding/welcome";
 import { GoalsScreen } from "./pages/onboarding/goals";
 import { ProfileScreen } from "./pages/onboarding/profile";
 import { Dashboard } from "./pages/dashboard";
+import { WorkoutsPage } from "./pages/workouts";
+import { NutritionPage } from "./pages/nutrition";
+import { WeightProgressPage } from "./pages/weight-progress";
+import { AICoachPage } from "./pages/ai-coach";
 import { BottomNavigation } from "./components/bottom-navigation";
 import { apiRequest } from "./lib/queryClient";
 
@@ -84,30 +88,10 @@ function App() {
           ) : (
             <div className="main-app">
               {activeNav === 'home' && <Dashboard />}
-              {activeNav === 'workouts' && (
-                <div className="p-6 text-center">
-                  <h2 className="text-2xl font-bold mb-4">Workouts</h2>
-                  <p className="text-gray-400">Coming soon...</p>
-                </div>
-              )}
-              {activeNav === 'nutrition' && (
-                <div className="p-6 text-center">
-                  <h2 className="text-2xl font-bold mb-4">Nutrition</h2>
-                  <p className="text-gray-400">Coming soon...</p>
-                </div>
-              )}
-              {activeNav === 'progress' && (
-                <div className="p-6 text-center">
-                  <h2 className="text-2xl font-bold mb-4">Progress</h2>
-                  <p className="text-gray-400">Coming soon...</p>
-                </div>
-              )}
-              {activeNav === 'profile' && (
-                <div className="p-6 text-center">
-                  <h2 className="text-2xl font-bold mb-4">Profile</h2>
-                  <p className="text-gray-400">Coming soon...</p>
-                </div>
-              )}
+              {activeNav === 'workouts' && <WorkoutsPage />}
+              {activeNav === 'nutrition' && <NutritionPage />}
+              {activeNav === 'progress' && <WeightProgressPage />}
+              {activeNav === 'profile' && <AICoachPage />}
               
               <BottomNavigation activeNav={activeNav} onNavChange={setActiveNav} />
             </div>

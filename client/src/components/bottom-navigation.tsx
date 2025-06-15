@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
   { id: 'workouts', icon: 'fas fa-dumbbell', label: 'Workouts' },
   { id: 'nutrition', icon: 'fas fa-apple-alt', label: 'Nutrition' },
   { id: 'progress', icon: 'fas fa-chart-line', label: 'Progress' },
-  { id: 'profile', icon: 'fas fa-user', label: 'Profile' }
+  { id: 'profile', icon: 'fas fa-robot', label: 'AI Coach' }
 ];
 
 export function BottomNavigation({ activeNav, onNavChange }: BottomNavigationProps) {
