@@ -236,7 +236,7 @@ export function Dashboard() {
             <Button 
               onClick={handleLogMeal}
               disabled={logMealMutation.isPending}
-              className="w-full py-3 bg-gradient-to-r from-secondary to-secondary/80 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="w-full py-3 bg-gradient-to-r from-red-400 to-red-400/80 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               {logMealMutation.isPending ? (
                 <i className="fas fa-spinner fa-spin" />
@@ -250,8 +250,8 @@ export function Dashboard() {
           <Card3D hoverable={false}>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold">Weight Progress</h3>
-              <div className="w-10 h-10 bg-accent/20 rounded-xl flex items-center justify-center">
-                <i className="fas fa-chart-line text-accent" />
+              <div className="w-10 h-10 bg-cyan-400/20 rounded-xl flex items-center justify-center">
+                <i className="fas fa-chart-line text-cyan-400" />
               </div>
             </div>
             <div className="flex items-center justify-between mb-4">
@@ -262,14 +262,14 @@ export function Dashboard() {
                 <p className="text-sm text-gray-400">Current Weight</p>
               </div>
               <div className="text-right">
-                <p className="text-lg font-semibold text-accent">-1.5 kg</p>
+                <p className="text-lg font-semibold text-cyan-400">-1.5 kg</p>
                 <p className="text-sm text-gray-400">This month</p>
               </div>
             </div>
             <Button 
               onClick={handleUpdateWeight}
               disabled={updateWeightMutation.isPending}
-              className="w-full py-3 bg-gradient-to-r from-accent to-accent/80 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="w-full py-3 bg-gradient-to-r from-cyan-400 to-cyan-400/80 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               {updateWeightMutation.isPending ? (
                 <i className="fas fa-spinner fa-spin" />
@@ -281,11 +281,11 @@ export function Dashboard() {
           
           {/* AI Coach Tip */}
           <Card3D 
-            className="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20" 
+            className="bg-gradient-to-br from-violet-500/10 to-cyan-400/10 border border-violet-500/20" 
             hoverable={false}
           >
             <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-400 rounded-xl flex items-center justify-center flex-shrink-0">
                 <i className="fas fa-robot text-white" />
               </div>
               <div className="flex-1">
@@ -293,7 +293,7 @@ export function Dashboard() {
                 <p className="text-sm text-gray-300 mb-4">
                   {currentTip.message}
                 </p>
-                <button className="text-primary text-sm font-semibold hover:text-accent transition-colors duration-300">
+                <button className="text-violet-400 text-sm font-semibold hover:text-cyan-400 transition-colors duration-300">
                   Ask AI Coach <i className="fas fa-arrow-right ml-1" />
                 </button>
               </div>
