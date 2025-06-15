@@ -60,9 +60,9 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-dark-bg">
+      <div className="min-h-screen flex items-center justify-center" style={{ background: 'linear-gradient(135deg, hsl(240, 41%, 6%) 0%, hsl(240, 27%, 11%) 100%)' }}>
         <div className="text-center">
-          <i className="fas fa-dumbbell text-4xl text-primary mb-4 animate-pulse" />
+          <i className="fas fa-dumbbell text-4xl mb-4 animate-pulse" style={{ color: 'hsl(260, 100%, 70%)' }} />
           <p className="text-gray-300">Loading FitPulse...</p>
         </div>
       </div>

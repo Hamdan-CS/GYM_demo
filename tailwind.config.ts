@@ -44,6 +44,9 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
+        // Custom FitPulse colors
+        "dark-bg": "var(--dark-bg)",
+        "dark-surface": "var(--dark-surface)",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",

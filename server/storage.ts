@@ -89,9 +89,15 @@ export class MemStorage implements IStorage {
   async createUserProfile(profileData: InsertUserProfile & { userId: number }): Promise<UserProfile> {
     const id = this.currentId++;
     const profile: UserProfile = { 
-      ...profileData, 
       id, 
-      createdAt: new Date() 
+      userId: profileData.userId,
+      age: profileData.age,
+      height: profileData.height,
+      weight: profileData.weight,
+      fitnessLevel: profileData.fitnessLevel,
+      goal: profileData.goal,
+      onboardingComplete: profileData.onboardingComplete ?? false,
+      createdAt: new Date()
     };
     this.userProfiles.set(id, profile);
     return profile;
@@ -127,8 +133,14 @@ export class MemStorage implements IStorage {
   async createWorkout(workoutData: InsertWorkout & { userId: number }): Promise<Workout> {
     const id = this.currentId++;
     const workout: Workout = { 
-      ...workoutData, 
-      id, 
+      id,
+      userId: workoutData.userId,
+      name: workoutData.name,
+      type: workoutData.type,
+      duration: workoutData.duration,
+      calories: workoutData.calories,
+      completed: workoutData.completed ?? false,
+      progress: workoutData.progress ?? 0,
       createdAt: new Date() 
     };
     this.workouts.set(id, workout);
