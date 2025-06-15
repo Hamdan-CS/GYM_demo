@@ -46,11 +46,15 @@ export function AICoachPage() {
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  
   // Auto-scroll to bottom when new messages are added
   useEffect(() => {
-    const scrollContainer = document.querySelector('[data-radix-scroll-area-viewport]');
-    if (scrollContainer) {
-      scrollContainer.scrollTop = scrollContainer.scrollHeight;
+    if (scrollAreaRef.current) {
+      const scrollContainer = scrollAreaRef.current.querySelector('[data-radix-scroll-area-viewport]');
+      if (scrollContainer) {
+        scrollContainer.scrollTop = scrollContainer.scrollHeight;
+      }
     }
   }, [messages, isTyping]);
 
@@ -155,7 +159,7 @@ export function AICoachPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <Card3D className="h-full" hoverable={false}>
-            <ScrollArea className="h-full pr-4">
+            <ScrollArea ref={scrollAreaRef} className="h-full pr-4">
               <div className="space-y-4">
                 <AnimatePresence>
                   {messages.map((message, index) => (
