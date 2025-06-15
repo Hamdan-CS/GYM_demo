@@ -16,17 +16,17 @@ export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
       {/* Floating background elements */}
       <div className="absolute inset-0 opacity-20">
         <motion.div 
-          className="absolute top-20 left-10 w-20 h-20 bg-primary rounded-full"
+          className="absolute top-20 left-10 w-20 h-20 bg-violet-500 rounded-full"
           animate={{ y: [-20, 20, -20] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute top-40 right-16 w-12 h-12 bg-secondary rounded-full"
+          className="absolute top-40 right-16 w-12 h-12 bg-red-400 rounded-full"
           animate={{ y: [20, -20, 20] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
         <motion.div 
-          className="absolute bottom-32 left-20 w-16 h-16 bg-accent rounded-full"
+          className="absolute bottom-32 left-20 w-16 h-16 bg-cyan-400 rounded-full"
           animate={{ y: [-15, 15, -15] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 4 }}
         />
@@ -35,7 +35,7 @@ export function WelcomeScreen({ onNext }: WelcomeScreenProps) {
       <div className="text-center z-10 max-w-md mx-auto">
         {/* App Logo */}
         <motion.div 
-          className="mb-8 w-32 h-32 mx-auto bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center shadow-[20px_20px_60px_#0d0d1a,-20px_-20px_60px_#232342]"
+          className="mb-8 w-32 h-32 mx-auto bg-gradient-to-br from-violet-500 to-cyan-400 rounded-3xl flex items-center justify-center shadow-[20px_20px_60px_#0d0d1a,-20px_-20px_60px_#232342]"
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}

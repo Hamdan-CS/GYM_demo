@@ -13,7 +13,7 @@ export function Card3D({ children, className, hoverable = true, onClick }: Card3
     <motion.div
       className={cn(
         "relative rounded-2xl p-6",
-        "bg-gradient-to-br from-dark-surface to-dark-surface/80",
+        "bg-gradient-to-br from-slate-800 to-slate-800/80",
         "shadow-[20px_20px_60px_#0d0d1a,-20px_-20px_60px_#232342]",
         "border border-white/5",
         hoverable && "cursor-pointer",

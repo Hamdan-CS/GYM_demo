@@ -31,18 +31,18 @@ export function BottomNavigation({ activeNav, onNavChange }: BottomNavigationPro
                 key={item.id}
                 className={cn(
                   "flex flex-col items-center space-y-1 p-2 rounded-xl transition-all duration-300",
-                  activeNav === item.id ? "bg-primary/20" : ""
+                  activeNav === item.id ? "bg-violet-500/20" : ""
                 )}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onNavChange(item.id)}
               >
                 <i className={cn(
                   `${item.icon} text-xl transition-colors duration-300`,
-                  activeNav === item.id ? "text-primary" : "text-gray-400"
+                  activeNav === item.id ? "text-violet-400" : "text-gray-400"
                 )} />
                 <span className={cn(
                   "text-xs font-medium transition-colors duration-300",
-                  activeNav === item.id ? "text-primary" : "text-gray-400"
+                  activeNav === item.id ? "text-violet-400" : "text-gray-400"
                 )}>
                   {item.label}
                 </span>

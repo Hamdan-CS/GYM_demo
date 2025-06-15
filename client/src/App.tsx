@@ -72,7 +72,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen bg-dark-bg text-white">
+        <div className="min-h-screen text-white" style={{ background: 'linear-gradient(135deg, hsl(240, 41%, 6%) 0%, hsl(240, 27%, 11%) 100%)' }}>
           {!isOnboardingComplete ? (
             <div className="onboarding-container">
               {currentStep === 'welcome' && <WelcomeScreen onNext={handleWelcomeNext} />}
