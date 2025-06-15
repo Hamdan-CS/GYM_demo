@@ -137,23 +137,23 @@ export function Dashboard() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Card3D className="bg-gradient-to-br from-primary/20 to-primary/5" hoverable={false}>
+          <Card3D className="bg-gradient-to-br from-violet-500/20 to-violet-500/5" hoverable={false}>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-400">Streak</p>
-                <p className="text-2xl font-bold text-primary">7 days</p>
+                <p className="text-2xl font-bold text-violet-400">7 days</p>
               </div>
-              <i className="fas fa-fire text-primary text-xl" />
+              <i className="fas fa-fire text-violet-400 text-xl" />
             </div>
           </Card3D>
           
-          <Card3D className="bg-gradient-to-br from-accent/20 to-accent/5" hoverable={false}>
+          <Card3D className="bg-gradient-to-br from-cyan-400/20 to-cyan-400/5" hoverable={false}>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-400">Calories</p>
-                <p className="text-2xl font-bold text-accent">{nutritionStats.totalCalories}</p>
+                <p className="text-2xl font-bold text-cyan-400">{nutritionStats.totalCalories}</p>
               </div>
-              <i className="fas fa-bolt text-accent text-xl" />
+              <i className="fas fa-bolt text-cyan-400 text-xl" />
             </div>
           </Card3D>
         </motion.div>
@@ -170,8 +170,8 @@ export function Dashboard() {
           <Card3D hoverable={false}>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold">Today's Workout</h3>
-              <div className="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center">
-                <i className="fas fa-dumbbell text-primary" />
+              <div className="w-10 h-10 bg-violet-500/20 rounded-xl flex items-center justify-center">
+                <i className="fas fa-dumbbell text-violet-400" />
               </div>
             </div>
             <div className="space-y-3">
@@ -179,13 +179,13 @@ export function Dashboard() {
                 <span className="text-gray-400">
                   {todaysWorkout?.name || "Upper Body Strength"}
                 </span>
-                <span className="text-sm bg-primary/20 text-primary px-2 py-1 rounded-lg">
+                <span className="text-sm bg-violet-500/20 text-violet-400 px-2 py-1 rounded-lg">
                   {todaysWorkout?.duration || 45} min
                 </span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <motion.div 
-                  className="bg-gradient-to-r from-primary to-accent h-2 rounded-full"
+                  className="bg-gradient-to-r from-violet-500 to-cyan-400 h-2 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${todaysWorkout?.progress || 0}%` }}
                   transition={{ duration: 1, delay: 0.5 }}
@@ -194,7 +194,7 @@ export function Dashboard() {
               <Button 
                 onClick={handleStartWorkout}
                 disabled={startWorkoutMutation.isPending}
-                className="w-full py-3 bg-gradient-to-r from-primary to-accent rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                className="w-full py-3 bg-gradient-to-r from-violet-500 to-cyan-400 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
                 {startWorkoutMutation.isPending ? (
                   <i className="fas fa-spinner fa-spin" />
@@ -209,8 +209,8 @@ export function Dashboard() {
           <Card3D hoverable={false}>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold">Nutrition</h3>
-              <div className="w-10 h-10 bg-secondary/20 rounded-xl flex items-center justify-center">
-                <i className="fas fa-apple-alt text-secondary" />
+              <div className="w-10 h-10 bg-red-400/20 rounded-xl flex items-center justify-center">
+                <i className="fas fa-apple-alt text-red-400" />
               </div>
             </div>
             <div className="grid grid-cols-3 gap-4 mb-4">

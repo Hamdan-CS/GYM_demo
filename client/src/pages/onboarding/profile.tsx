@@ -120,7 +120,7 @@ export function ProfileScreen({ goal, onComplete }: ProfileScreenProps) {
           <div>
             <Label className="block text-sm font-medium mb-2 text-gray-300">Fitness Level</Label>
             <Select onValueChange={(value) => form.setValue('fitnessLevel', value as any)}>
-              <SelectTrigger className="w-full p-4 bg-dark-surface rounded-xl border border-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300">
+              <SelectTrigger className="w-full p-4 bg-slate-800 rounded-xl border border-gray-600 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 transition-all duration-300">
                 <SelectValue placeholder="Select your fitness level" />
               </SelectTrigger>
               <SelectContent>
@@ -142,7 +142,7 @@ export function ProfileScreen({ goal, onComplete }: ProfileScreenProps) {
           <Button 
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-4 bg-gradient-to-r from-primary to-accent rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="w-full py-4 bg-gradient-to-r from-violet-500 to-cyan-400 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             size="lg"
           >
             {isSubmitting ? (
